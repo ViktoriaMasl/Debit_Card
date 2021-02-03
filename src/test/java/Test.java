@@ -13,8 +13,8 @@ class TestDebitCard {
         SelenideElement form = $(".form");
         form.$("[data-test-id=name] input").setValue("Иван");
         form.$("[data-test-id=phone] input").setValue("+77777777777");
-        form.$("[data-test-id=agreement] input").click();
+        form.$(".checkbox__box").click();
         form.$(".button").click();
-        $(".alert-success").shouldHave(exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+        $(".Success_successBlock__2L3Cw").shouldHave(exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
     }
 }
